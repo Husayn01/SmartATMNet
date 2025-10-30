@@ -1,0 +1,101 @@
+atm_id,bank,model,zone,address,latitude,longitude,location_type,install_date,status,cash_capacity,last_maintenance,network_type,power_backup,surveillance
+ATM-00001,Zenith Bank,NCR SelfServ 88,Ikeja,"190 Ikeja Street, Lagos",6.587401172734765,3.362928429525953,branch,2017-03-30,operational,10000000,2025-10-30T07:58:11.093955,4G,True,False
+ATM-00002,Zenith Bank,Diebold Nixdorf 7600,Ikeja,"60 Ikeja Street, Lagos",6.596614211524135,3.3550614387873545,offsite,2016-10-20,operational,10000000,2025-10-30T07:58:11.094969,Fiber,False,True
+ATM-00003,Zenith Bank,Diebold Nixdorf 7600,Victoria Island,"179 Victoria Island Street, Lagos",6.42500457592614,3.4130148536668656,offsite,2016-04-08,operational,5000000,2025-10-30T07:58:11.094969,Fiber,False,True
+ATM-00004,Zenith Bank,NCR SelfServ 88,Yaba,"187 Yaba Street, Lagos",6.514176995186873,3.3633930465141284,airport,2023-12-13,operational,10000000,2025-10-30T07:58:11.097998,DSL,True,True
+ATM-00005,Zenith Bank,NCR SelfServ 88,Surulere,"12 Surulere Street, Lagos",6.503350532742709,3.370022733631548,branch,2022-03-22,operational,7000000,2025-10-30T07:58:11.097998,Fiber,True,True
+ATM-00006,Zenith Bank,Wincor Nixdorf ProCash,Lekki,"91 Lekki Street, Lagos",6.435780281230859,3.4645791128819647,branch,2017-12-31,operational,10000000,2025-10-30T07:58:11.098969,DSL,False,True
+ATM-00007,Zenith Bank,Diebold Nixdorf 7600,Yaba,"176 Yaba Street, Lagos",6.508771309376613,3.389132543103695,branch,2022-04-06,operational,7000000,2025-10-30T07:58:11.098969,Fiber,False,True
+ATM-00008,Zenith Bank,Diebold Nixdorf 7600,Ajah,"168 Ajah Street, Lagos",6.4697692503796915,3.579187326155468,airport,2023-03-25,operational,5000000,2025-10-30T07:58:11.098969,DSL,True,True
+ATM-00009,Zenith Bank,Hyosung Nautilus,Ikoyi,"93 Ikoyi Street, Lagos",6.442772830366291,3.4515015042598045,university,2019-04-19,operational,5000000,2025-10-30T07:58:11.098969,4G,False,False
+ATM-00010,Zenith Bank,NCR SelfServ 88,Ikoyi,"99 Ikoyi Street, Lagos",6.449264771460261,3.451444855209604,university,2022-01-05,maintenance,5000000,2025-10-30T07:58:11.098969,DSL,True,True
+ATM-00011,Zenith Bank,Wincor Nixdorf ProCash,Yaba,"29 Yaba Street, Lagos",6.507540005145897,3.3647263101737868,branch,2016-09-25,operational,7000000,2025-10-30T07:58:11.098969,DSL,True,True
+ATM-00012,Zenith Bank,Wincor Nixdorf ProCash,Ikeja,"164 Ikeja Street, Lagos",6.596706515279106,3.3619564440705894,mall,2016-04-12,operational,10000000,2025-10-30T07:58:11.098969,4G,True,True
+ATM-00013,Zenith Bank,Wincor Nixdorf ProCash,Ikeja,"79 Ikeja Street, Lagos",6.585978092413522,3.3636348636978894,university,2023-12-13,operational,7000000,2025-10-30T07:58:11.098969,4G,True,True
+ATM-00014,Zenith Bank,Diebold Nixdorf 7600,Lekki,"169 Lekki Street, Lagos",6.44641129512395,3.475892143739798,mall,2018-11-30,operational,7000000,2025-10-30T07:58:11.098969,4G,True,True
+ATM-00015,Zenith Bank,Wincor Nixdorf ProCash,Surulere,"103 Surulere Street, Lagos",6.5167059742664355,3.3650951223055783,airport,2019-01-11,operational,5000000,2025-10-30T07:58:11.098969,4G,False,False
+ATM-00016,Zenith Bank,Diebold Nixdorf 7600,Surulere,"2 Surulere Street, Lagos",6.479739723440361,3.3643441182908043,offsite,2024-01-28,operational,7000000,2025-10-30T07:58:11.099968,4G,True,True
+ATM-00017,Zenith Bank,Diebold Nixdorf 7600,Apapa,"139 Apapa Street, Lagos",6.4321924739490015,3.377120569623227,university,2018-05-15,operational,7000000,2025-10-30T07:58:11.099968,Fiber,False,False
+ATM-00018,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"109 Ikoyi Street, Lagos",6.450444091041989,3.446153469934784,branch,2017-04-12,operational,10000000,2025-10-30T07:58:11.099968,4G,False,True
+ATM-00019,Zenith Bank,Diebold Nixdorf 7600,Ikeja,"50 Ikeja Street, Lagos",6.584008356337632,3.3719445419133254,airport,2022-10-10,operational,5000000,2025-10-30T07:58:11.099968,4G,True,True
+ATM-00020,Zenith Bank,NCR SelfServ 88,Ikeja,"167 Ikeja Street, Lagos",6.616371298736509,3.3874411034031984,branch,2016-05-19,operational,5000000,2025-10-30T07:58:11.099968,Fiber,True,True
+ATM-00021,Zenith Bank,NCR SelfServ 88,Ikoyi,"43 Ikoyi Street, Lagos",6.449158924759076,3.451012353751189,mall,2016-01-15,operational,7000000,2025-10-30T07:58:11.099968,Fiber,True,True
+ATM-00022,Zenith Bank,Diebold Nixdorf 7600,Apapa,"49 Apapa Street, Lagos",6.438768313019783,3.3784483745987663,university,2016-07-31,operational,10000000,2025-10-30T07:58:11.099968,Fiber,False,True
+ATM-00023,Zenith Bank,NCR SelfServ 88,Lekki,"131 Lekki Street, Lagos",6.430604458609624,3.4613329984392287,university,2024-01-26,operational,5000000,2025-10-30T07:58:11.099968,Fiber,False,True
+ATM-00024,Zenith Bank,NCR SelfServ 88,Surulere,"159 Surulere Street, Lagos",6.480179336219795,3.365394926578901,university,2018-12-20,operational,7000000,2025-10-30T07:58:11.099968,4G,True,True
+ATM-00025,Zenith Bank,Hyosung Nautilus,Yaba,"34 Yaba Street, Lagos",6.522667608918399,3.3703998831919506,mall,2016-05-26,operational,5000000,2025-10-30T07:58:11.099968,Fiber,True,True
+ATM-00026,Zenith Bank,NCR SelfServ 88,Ikeja,"138 Ikeja Street, Lagos",6.584926172490682,3.364608016590016,mall,2024-01-23,operational,7000000,2025-10-30T07:58:11.099968,Fiber,False,True
+ATM-00027,Zenith Bank,NCR SelfServ 88,Yaba,"171 Yaba Street, Lagos",6.528484165404618,3.370375150087999,branch,2023-04-29,operational,5000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00028,Zenith Bank,Wincor Nixdorf ProCash,Surulere,"53 Surulere Street, Lagos",6.504399885152053,3.373216512615676,university,2019-05-09,operational,5000000,2025-10-30T07:58:11.099968,4G,True,True
+ATM-00029,Zenith Bank,NCR SelfServ 88,Victoria Island,"86 Victoria Island Street, Lagos",6.438944768920785,3.427384535092055,mall,2023-01-08,operational,10000000,2025-10-30T07:58:11.099968,DSL,True,False
+ATM-00030,Zenith Bank,Diebold Nixdorf 7600,Ikeja,"140 Ikeja Street, Lagos",6.577841125522434,3.368768639380488,university,2023-03-04,operational,5000000,2025-10-30T07:58:11.099968,Fiber,True,True
+ATM-00031,Zenith Bank,Wincor Nixdorf ProCash,Victoria Island,"54 Victoria Island Street, Lagos",6.435382667532423,3.4285773364254215,mall,2016-01-31,operational,7000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00032,Zenith Bank,Diebold Nixdorf 7600,Surulere,"46 Surulere Street, Lagos",6.512156648186533,3.3400914544759277,mall,2016-01-22,operational,10000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00033,Zenith Bank,Hyosung Nautilus,Ikeja,"10 Ikeja Street, Lagos",6.610743730053511,3.3628973487018268,airport,2020-11-28,operational,5000000,2025-10-30T07:58:11.099968,4G,False,False
+ATM-00034,Zenith Bank,Wincor Nixdorf ProCash,Ajah,"18 Ajah Street, Lagos",6.488475564161934,3.554964999708875,university,2020-05-07,operational,10000000,2025-10-30T07:58:11.099968,Fiber,True,False
+ATM-00035,Zenith Bank,Diebold Nixdorf 7600,Yaba,"149 Yaba Street, Lagos",6.534301372630462,3.369018654500919,branch,2018-02-21,operational,10000000,2025-10-30T07:58:11.099968,Fiber,True,True
+ATM-00036,Zenith Bank,Hyosung Nautilus,Ikeja,"148 Ikeja Street, Lagos",6.584003150980092,3.3557754613485296,airport,2024-10-24,operational,10000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00037,Zenith Bank,Wincor Nixdorf ProCash,Surulere,"111 Surulere Street, Lagos",6.479698952445053,3.365669507396451,mall,2017-11-04,operational,5000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00038,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"104 Ikoyi Street, Lagos",6.4618883365677755,3.433776499106672,offsite,2020-02-12,operational,7000000,2025-10-30T07:58:11.099968,DSL,True,False
+ATM-00039,Zenith Bank,Hyosung Nautilus,Yaba,"141 Yaba Street, Lagos",6.529149006772162,3.3705549979707343,offsite,2020-01-05,operational,10000000,2025-10-30T07:58:11.099968,DSL,True,True
+ATM-00040,Zenith Bank,Hyosung Nautilus,Surulere,"189 Surulere Street, Lagos",6.483687655847922,3.342491821469005,university,2017-05-21,operational,7000000,2025-10-30T07:58:11.100981,4G,True,True
+ATM-00041,Zenith Bank,Diebold Nixdorf 7600,Yaba,"51 Yaba Street, Lagos",6.501694158489831,3.3602485487237104,airport,2017-12-23,operational,5000000,2025-10-30T07:58:11.100981,Fiber,True,True
+ATM-00042,Zenith Bank,Hyosung Nautilus,Surulere,"127 Surulere Street, Lagos",6.492886114515062,3.3450028538036523,branch,2016-05-30,operational,5000000,2025-10-30T07:58:11.100981,Fiber,False,True
+ATM-00043,Zenith Bank,NCR SelfServ 88,Apapa,"143 Apapa Street, Lagos",6.436867931186399,3.3736334538940667,airport,2023-05-03,operational,10000000,2025-10-30T07:58:11.100981,DSL,True,True
+ATM-00044,Zenith Bank,Hyosung Nautilus,Apapa,"141 Apapa Street, Lagos",6.444736544483068,3.34606631630172,airport,2019-10-14,operational,5000000,2025-10-30T07:58:11.100981,DSL,False,True
+ATM-00045,Zenith Bank,Diebold Nixdorf 7600,Apapa,"71 Apapa Street, Lagos",6.444494903730597,3.3682417945044425,offsite,2021-10-14,operational,10000000,2025-10-30T07:58:11.101493,4G,False,True
+ATM-00046,Zenith Bank,Diebold Nixdorf 7600,Lekki,"17 Lekki Street, Lagos",6.443994715835928,3.4671352556415234,airport,2020-03-02,operational,7000000,2025-10-30T07:58:11.101493,Fiber,True,True
+ATM-00047,Zenith Bank,Hyosung Nautilus,Victoria Island,"123 Victoria Island Street, Lagos",6.40833584334336,3.4159703521068727,airport,2020-02-18,operational,10000000,2025-10-30T07:58:11.101493,DSL,True,True
+ATM-00048,Zenith Bank,Diebold Nixdorf 7600,Apapa,"70 Apapa Street, Lagos",6.444333439041865,3.3408609927978685,mall,2017-05-01,operational,7000000,2025-10-30T07:58:11.101493,DSL,False,True
+ATM-00049,Zenith Bank,NCR SelfServ 88,Lekki,"101 Lekki Street, Lagos",6.4510757110251165,3.4804199902734463,branch,2017-08-16,operational,7000000,2025-10-30T07:58:11.101493,4G,False,True
+ATM-00050,Zenith Bank,Hyosung Nautilus,Surulere,"84 Surulere Street, Lagos",6.490400021922955,3.3742855994400762,mall,2016-05-25,maintenance,7000000,2025-10-30T07:58:11.101493,Fiber,True,True
+ATM-00051,Zenith Bank,Wincor Nixdorf ProCash,Victoria Island,"58 Victoria Island Street, Lagos",6.4341057637299945,3.433149321984436,branch,2016-05-16,operational,5000000,2025-10-30T07:58:11.101493,4G,True,True
+ATM-00052,Zenith Bank,Diebold Nixdorf 7600,Surulere,"122 Surulere Street, Lagos",6.503678353784797,3.361658783277201,offsite,2019-08-14,operational,7000000,2025-10-30T07:58:11.101493,4G,True,True
+ATM-00053,Zenith Bank,Diebold Nixdorf 7600,Ikeja,"80 Ikeja Street, Lagos",6.580723949986305,3.3550271370198987,mall,2018-05-17,operational,7000000,2025-10-30T07:58:11.101493,Fiber,True,False
+ATM-00054,Zenith Bank,NCR SelfServ 88,Surulere,"179 Surulere Street, Lagos",6.507799235398049,3.373111729563552,university,2023-06-23,operational,10000000,2025-10-30T07:58:11.101493,4G,True,True
+ATM-00055,Zenith Bank,NCR SelfServ 88,Ajah,"130 Ajah Street, Lagos",6.475701730162273,3.544306086006634,airport,2019-05-03,operational,7000000,2025-10-30T07:58:11.101493,DSL,True,True
+ATM-00056,Zenith Bank,Hyosung Nautilus,Lekki,"46 Lekki Street, Lagos",6.456751812160536,3.492518949249523,mall,2017-12-04,operational,10000000,2025-10-30T07:58:11.101493,Fiber,True,True
+ATM-00057,Zenith Bank,Wincor Nixdorf ProCash,Yaba,"63 Yaba Street, Lagos",6.529029240755624,3.361866515922227,airport,2022-02-05,operational,10000000,2025-10-30T07:58:11.101493,DSL,True,True
+ATM-00058,Zenith Bank,Wincor Nixdorf ProCash,Apapa,"47 Apapa Street, Lagos",6.446401997295654,3.353892998647044,mall,2021-01-05,operational,10000000,2025-10-30T07:58:11.101493,DSL,True,True
+ATM-00059,Zenith Bank,NCR SelfServ 88,Surulere,"62 Surulere Street, Lagos",6.505702986564168,3.358643113873952,offsite,2017-02-01,operational,10000000,2025-10-30T07:58:11.101493,Fiber,True,False
+ATM-00060,Zenith Bank,Diebold Nixdorf 7600,Yaba,"104 Yaba Street, Lagos",6.5234714862118075,3.3706482412052035,university,2020-09-10,operational,10000000,2025-10-30T07:58:11.102508,Fiber,True,True
+ATM-00061,Zenith Bank,Wincor Nixdorf ProCash,Ajah,"180 Ajah Street, Lagos",6.467949810514128,3.556064919653953,offsite,2023-06-24,operational,7000000,2025-10-30T07:58:11.102508,4G,True,True
+ATM-00062,Zenith Bank,Diebold Nixdorf 7600,Lekki,"56 Lekki Street, Lagos",6.456944186140358,3.4649599850787474,university,2016-04-22,operational,7000000,2025-10-30T07:58:11.102508,4G,True,True
+ATM-00063,Zenith Bank,Diebold Nixdorf 7600,Ajah,"78 Ajah Street, Lagos",6.450365934690243,3.5651654035707065,mall,2024-04-27,maintenance,10000000,2025-10-30T07:58:11.102508,Fiber,True,False
+ATM-00064,Zenith Bank,NCR SelfServ 88,Apapa,"4 Apapa Street, Lagos",6.449862568785053,3.3584758777972206,airport,2021-01-04,operational,5000000,2025-10-30T07:58:11.102508,Fiber,True,True
+ATM-00065,Zenith Bank,Hyosung Nautilus,Ikeja,"126 Ikeja Street, Lagos",6.579363286810225,3.37917782827808,branch,2023-02-17,operational,10000000,2025-10-30T07:58:11.102508,Fiber,False,True
+ATM-00066,Zenith Bank,Diebold Nixdorf 7600,Ikoyi,"199 Ikoyi Street, Lagos",6.454902901405209,3.42962057859555,airport,2021-07-01,operational,7000000,2025-10-30T07:58:11.102508,Fiber,True,False
+ATM-00067,Zenith Bank,Diebold Nixdorf 7600,Ikeja,"161 Ikeja Street, Lagos",6.584841007812216,3.3804171254876816,offsite,2022-02-21,operational,5000000,2025-10-30T07:58:11.102508,4G,False,True
+ATM-00068,Zenith Bank,Wincor Nixdorf ProCash,Apapa,"9 Apapa Street, Lagos",6.436159049382241,3.3679782331951613,airport,2024-01-13,operational,7000000,2025-10-30T07:58:11.102508,DSL,True,True
+ATM-00069,Zenith Bank,Hyosung Nautilus,Surulere,"30 Surulere Street, Lagos",6.498682495148423,3.3650053889360994,mall,2023-03-28,operational,5000000,2025-10-30T07:58:11.102508,Fiber,True,True
+ATM-00070,Zenith Bank,Hyosung Nautilus,Yaba,"32 Yaba Street, Lagos",6.514547918811046,3.3705636476217906,airport,2021-10-11,operational,7000000,2025-10-30T07:58:11.102508,Fiber,False,False
+ATM-00071,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"155 Ikoyi Street, Lagos",6.44401471609648,3.4152530754652393,university,2018-04-01,maintenance,10000000,2025-10-30T07:58:11.102508,Fiber,True,True
+ATM-00072,Zenith Bank,Hyosung Nautilus,Lekki,"133 Lekki Street, Lagos",6.453460379577347,3.4905429115170707,offsite,2018-04-08,operational,7000000,2025-10-30T07:58:11.102508,4G,True,True
+ATM-00073,Zenith Bank,NCR SelfServ 88,Ajah,"42 Ajah Street, Lagos",6.462992146543159,3.5715469469593373,mall,2017-05-27,operational,10000000,2025-10-30T07:58:11.102508,4G,True,True
+ATM-00074,Zenith Bank,NCR SelfServ 88,Ajah,"198 Ajah Street, Lagos",6.46596700228003,3.564383850093164,branch,2017-06-16,operational,7000000,2025-10-30T07:58:11.102508,Fiber,False,True
+ATM-00075,Zenith Bank,Hyosung Nautilus,Apapa,"195 Apapa Street, Lagos",6.428964471007454,3.3503822495309175,offsite,2021-08-08,operational,10000000,2025-10-30T07:58:11.102508,Fiber,False,True
+ATM-00076,Zenith Bank,Diebold Nixdorf 7600,Surulere,"80 Surulere Street, Lagos",6.498933560280107,3.3611900563621497,branch,2022-04-24,offline,5000000,2025-10-30T07:58:11.102508,Fiber,True,True
+ATM-00077,Zenith Bank,Hyosung Nautilus,Lekki,"184 Lekki Street, Lagos",6.439074462410471,3.482116465197034,airport,2019-06-03,offline,5000000,2025-10-30T07:58:11.103510,Fiber,True,True
+ATM-00078,Zenith Bank,NCR SelfServ 88,Lekki,"71 Lekki Street, Lagos",6.458307005307081,3.4880764951988885,mall,2015-12-31,operational,5000000,2025-10-30T07:58:11.103510,Fiber,True,True
+ATM-00079,Zenith Bank,Diebold Nixdorf 7600,Apapa,"115 Apapa Street, Lagos",6.448443223108155,3.3535049576677203,university,2016-04-11,operational,7000000,2025-10-30T07:58:11.103510,Fiber,True,True
+ATM-00080,Zenith Bank,Hyosung Nautilus,Surulere,"60 Surulere Street, Lagos",6.511140519039495,3.355531003821983,mall,2016-06-24,operational,7000000,2025-10-30T07:58:11.103510,Fiber,True,True
+ATM-00081,Zenith Bank,Hyosung Nautilus,Lekki,"10 Lekki Street, Lagos",6.432449850792375,3.492514143607074,mall,2023-09-15,operational,7000000,2025-10-30T07:58:11.103510,4G,True,True
+ATM-00082,Zenith Bank,Hyosung Nautilus,Lekki,"168 Lekki Street, Lagos",6.466198271761645,3.4568931299297483,mall,2021-01-13,operational,7000000,2025-10-30T07:58:11.103510,DSL,False,True
+ATM-00083,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"161 Ikoyi Street, Lagos",6.462748697008919,3.4419760723733743,university,2024-06-05,operational,5000000,2025-10-30T07:58:11.103510,DSL,True,True
+ATM-00084,Zenith Bank,NCR SelfServ 88,Surulere,"112 Surulere Street, Lagos",6.516033509128822,3.369514787719771,branch,2019-11-09,operational,7000000,2025-10-30T07:58:11.103510,4G,False,True
+ATM-00085,Zenith Bank,Wincor Nixdorf ProCash,Yaba,"96 Yaba Street, Lagos",6.513027471514215,3.3681678972873588,airport,2018-06-26,operational,5000000,2025-10-30T07:58:11.103510,4G,False,True
+ATM-00086,Zenith Bank,Diebold Nixdorf 7600,Ikoyi,"128 Ikoyi Street, Lagos",6.470513160640942,3.41732470880514,airport,2017-09-05,operational,7000000,2025-10-30T07:58:11.103510,DSL,False,True
+ATM-00087,Zenith Bank,Diebold Nixdorf 7600,Yaba,"19 Yaba Street, Lagos",6.513469191344152,3.372222624977723,university,2021-06-23,operational,7000000,2025-10-30T07:58:11.103510,DSL,False,True
+ATM-00088,Zenith Bank,Hyosung Nautilus,Surulere,"124 Surulere Street, Lagos",6.481166130696894,3.3543545719063053,mall,2018-05-21,operational,10000000,2025-10-30T07:58:11.103510,Fiber,False,True
+ATM-00089,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"3 Ikoyi Street, Lagos",6.456637160678228,3.4390319797093603,branch,2018-01-12,operational,7000000,2025-10-30T07:58:11.103510,4G,True,True
+ATM-00090,Zenith Bank,Wincor Nixdorf ProCash,Surulere,"174 Surulere Street, Lagos",6.5071230929496675,3.3697988309798186,offsite,2017-10-14,operational,10000000,2025-10-30T07:58:11.103510,DSL,False,True
+ATM-00091,Zenith Bank,Wincor Nixdorf ProCash,Victoria Island,"188 Victoria Island Street, Lagos",6.413356472256819,3.438285112492773,mall,2016-06-13,operational,5000000,2025-10-30T07:58:11.103510,4G,True,True
+ATM-00092,Zenith Bank,Wincor Nixdorf ProCash,Ajah,"43 Ajah Street, Lagos",6.4600788033825305,3.5767875925016965,airport,2021-07-10,operational,7000000,2025-10-30T07:58:11.103510,4G,True,False
+ATM-00093,Zenith Bank,Hyosung Nautilus,Surulere,"143 Surulere Street, Lagos",6.491531001976223,3.3707272787435576,branch,2021-11-12,operational,7000000,2025-10-30T07:58:11.103510,Fiber,True,True
+ATM-00094,Zenith Bank,Wincor Nixdorf ProCash,Ikoyi,"28 Ikoyi Street, Lagos",6.460993462215012,3.4304590747192574,university,2018-07-15,operational,10000000,2025-10-30T07:58:11.103510,4G,True,True
+ATM-00095,Zenith Bank,Wincor Nixdorf ProCash,Apapa,"167 Apapa Street, Lagos",6.443231834231817,3.345291080500289,branch,2021-06-02,offline,5000000,2025-10-30T07:58:11.103510,4G,False,True
+ATM-00096,Zenith Bank,Hyosung Nautilus,Ikoyi,"95 Ikoyi Street, Lagos",6.460819448754006,3.4413256048609266,university,2020-02-18,operational,10000000,2025-10-30T07:58:11.104527,4G,True,True
+ATM-00097,Zenith Bank,Hyosung Nautilus,Apapa,"72 Apapa Street, Lagos",6.428208651474202,3.3545211983493775,airport,2019-11-05,maintenance,7000000,2025-10-30T07:58:11.104527,4G,True,True
+ATM-00098,Zenith Bank,NCR SelfServ 88,Ajah,"102 Ajah Street, Lagos",6.460835257634463,3.5825282750374554,airport,2023-10-21,operational,10000000,2025-10-30T07:58:11.104527,DSL,True,False
+ATM-00099,Zenith Bank,Diebold Nixdorf 7600,Ajah,"33 Ajah Street, Lagos",6.481279123999053,3.552008223005715,university,2022-07-05,operational,5000000,2025-10-30T07:58:11.104527,Fiber,True,True
+ATM-00100,Zenith Bank,Wincor Nixdorf ProCash,Victoria Island,"38 Victoria Island Street, Lagos",6.447601092174646,3.423508618274526,offsite,2023-08-07,operational,5000000,2025-10-30T07:58:11.104527,4G,False,True

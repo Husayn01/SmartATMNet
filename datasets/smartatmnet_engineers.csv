@@ -1,0 +1,31 @@
+engineer_id,name,phone,email,skills,level,zone,latitude,longitude,availability,years_experience,success_rate,avg_resolution_time_minutes,assignments_completed,current_workload
+ENG-001,Ngozi Eze,+2347112526041,engineer1@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Surulere,6.4894351708742555,3.357519211138202,available,1,76.5,58,142,0
+ENG-002,Chinedu Eze,+2347983638819,engineer2@zenithbank.com,"[""card_reader"", ""network""]",junior,Apapa,6.44976681368411,3.350323012790207,off-duty,10,94.5,57,1905,0
+ENG-003,Adebayo Mohammed,+2348306308778,engineer3@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Apapa,6.4398666765132075,3.3522238317661013,available,2,88.5,75,266,3
+ENG-004,Ibrahim Adeyemi,+2348703160894,engineer4@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Yaba,6.5198355883709205,3.3854558547459117,available,9,92.7,76,890,3
+ENG-005,Fatima Aliyu,+2347856266548,engineer5@zenithbank.com,"[""card_reader"", ""network""]",junior,Apapa,6.44521979300523,3.3516017167855128,available,7,90.3,53,662,3
+ENG-006,Adebayo Adeyemi,+2347927447760,engineer6@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Ikeja,6.5883312886513155,3.378775919969774,on-job,14,87.8,67,2050,0
+ENG-007,Ibrahim Okafor,+2349079620210,engineer7@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Ikoyi,6.449752588152946,3.427848977981753,available,14,86.7,39,2675,1
+ENG-008,Fatima Adeyemi,+2348637683126,engineer8@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Ikeja,6.5919713642499,3.368523181886557,available,14,87.9,79,807,2
+ENG-009,Emeka Mohammed,+2347753817064,engineer9@zenithbank.com,"[""card_reader"", ""network""]",junior,Victoria Island,6.418222115788073,3.4292972541307285,available,5,84.2,39,898,0
+ENG-010,Ibrahim Aliyu,+2347732068555,engineer10@zenithbank.com,"[""card_reader"", ""network""]",junior,Ikeja,6.589548185516902,3.3702327473940845,available,7,96.7,68,523,0
+ENG-011,Chinedu Adeyemi,+2347584336404,engineer11@zenithbank.com,"[""card_reader"", ""network""]",junior,Lekki,6.446262259486606,3.47238029546226,available,13,84.5,43,2196,0
+ENG-012,Emeka Aliyu,+2348131582377,engineer12@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Ajah,6.473142651174728,3.5547083472520886,available,2,88.8,30,204,2
+ENG-013,Emeka Eze,+2347704637393,engineer13@zenithbank.com,"[""card_reader"", ""network""]",junior,Surulere,6.489299686874111,3.359047706572267,available,13,78.0,64,2091,1
+ENG-014,Chinedu Nwankwo,+2347040247151,engineer14@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Ajah,6.468995085007125,3.555357252237515,available,7,84.9,55,1205,2
+ENG-015,Fatima Okonkwo,+2348720826209,engineer15@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Ikeja,6.605352286186535,3.373201938037876,available,1,83.3,57,77,1
+ENG-016,Adebayo Nwankwo,+2348869436947,engineer16@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Ikoyi,6.450205491236717,3.4283902656229692,available,9,78.9,62,1746,0
+ENG-017,Ngozi Bello,+2347220771045,engineer17@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Surulere,6.489828884365554,3.3530454360564796,available,6,92.5,71,377,1
+ENG-018,Chioma Mohammed,+2348855956031,engineer18@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Apapa,6.4563194612841635,3.3560227778898115,available,13,85.8,70,1270,2
+ENG-019,Adebayo Eze,+2347991584436,engineer19@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Victoria Island,6.427138277274014,3.413037801016679,on-job,9,76.8,85,634,3
+ENG-020,Oluwaseun Mohammed,+2348299240136,engineer20@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Apapa,6.446412580558862,3.3527172215339127,available,8,77.4,87,1103,0
+ENG-021,Chioma Aliyu,+2348125428654,engineer21@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Lekki,6.447854960705311,3.467074924159631,available,4,81.5,56,546,0
+ENG-022,Adebayo Nwankwo,+2347610200991,engineer22@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Ajah,6.464839915699323,3.570831325199688,off-duty,6,88.9,39,641,0
+ENG-023,Ibrahim Okonkwo,+2348277841297,engineer23@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Lekki,6.451576680287421,3.46559438024008,available,5,89.8,51,380,0
+ENG-024,Fatima Eze,+2347387111671,engineer24@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Ikoyi,6.463023386271923,3.428434646902631,on-job,1,79.4,38,89,0
+ENG-025,Chinedu Mohammed,+2348882039138,engineer25@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Yaba,6.521126152088945,3.37102098082859,available,9,78.7,83,1729,1
+ENG-026,Fatima Bello,+2349082175672,engineer26@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Apapa,6.445783974196106,3.355398558651267,on-job,7,85.3,64,839,2
+ENG-027,Chioma Aliyu,+2348652356710,engineer27@zenithbank.com,"[""card_reader"", ""network""]",junior,Apapa,6.442535434654076,3.3573374486838143,available,6,97.2,82,504,1
+ENG-028,Chioma Mohammed,+2348190867181,engineer28@zenithbank.com,"[""cash_dispenser"", ""receipt_printer""]",junior,Yaba,6.52448587107995,3.38262801954238,available,11,77.9,35,2112,1
+ENG-029,Ngozi Nwankwo,+2347196953391,engineer29@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""receipt_printer"", ""network""]",senior,Yaba,6.524728265260235,3.3728407601381396,available,15,83.0,31,2449,0
+ENG-030,Ibrahim Adeyemi,+2347805118839,engineer30@zenithbank.com,"[""cash_dispenser"", ""card_reader"", ""network""]",mid,Ikoyi,6.448490775172142,3.4279736975089947,available,4,91.4,51,349,1
