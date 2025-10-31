@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useATMStats, useATMs } from '../hooks/useATMs'
 import { useRecentAlerts } from '../hooks/useTelemetry'
@@ -7,12 +6,12 @@ import { supabase } from '../services/supabase'
 import { 
   Activity, AlertTriangle, TrendingUp, Clock, 
   MapPin, Users, Zap, ArrowRight, CheckCircle,
-  Shield, BarChart3, Cpu, Mail, Phone, Globe,
-  Github, Linkedin, Twitter
+  Shield, BarChart3, Cpu, Github, Linkedin, Twitter,
+  Sparkles, Brain, Target, TrendingDown
 } from 'lucide-react'
 import StatCard from '../components/common/StatCard'
 import LoadingSpinner from '../components/common/LoadingSpinner'
-import { formatNumber, formatPercentage, formatTimeAgo, getSeverityColor } from '../utils/formatters'
+import { formatNumber, formatTimeAgo, getSeverityColor } from '../utils/formatters'
 
 export default function Landing() {
   const { stats, loading: statsLoading } = useATMStats()
@@ -27,7 +26,6 @@ export default function Landing() {
 
   async function fetchAdditionalData() {
     try {
-      // Get recent maintenance events
       const { data: maintenance } = await supabase
         .from('maintenance_events')
         .select('*, atms(zone)')
@@ -36,7 +34,6 @@ export default function Landing() {
       
       setRecentMaintenance(maintenance || [])
 
-      // Get engineer count
       const { count } = await supabase
         .from('engineers')
         .select('*', { count: 'exact', head: true })
@@ -49,429 +46,303 @@ export default function Landing() {
 
   if (statsLoading || atmsLoading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
         <LoadingSpinner size="lg" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Minimalistic */}
-      <div className="relative overflow-hidden bg-white">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 opacity-60"></div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-white dark:bg-gray-900">
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950/30"></div>
         
-        {/* Subtle animated orbs */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -left-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        {/* Animated orbs */}
+        <div className="absolute inset-0 overflow-hidden opacity-40 dark:opacity-20">
+          <div className="absolute -top-40 -left-40 w-80 h-80 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-400 dark:bg-pink-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-100">
-              <Zap className="w-4 h-4" />
-              AI-Powered ATM Management
+            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-200 dark:border-blue-800">
+              <Sparkles className="w-4 h-4" />
+              AI-Powered ATM Operations Platform
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              SmartATMNet
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
+                SmartATMNet
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Intelligent ATM Operations Platform for Enhanced Uptime, 
-              Predictive Maintenance & Optimized Engineer Dispatch
+            
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Revolutionizing ATM management with predictive AI, real-time monitoring, 
+              and intelligent dispatch for maximum uptime and operational efficiency
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/dashboard"
-                className="group inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-200"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Dashboard
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <Link
-                to="/map"
-                className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 transition-all duration-200"
+                to="/engineers"
+                className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-200"
               >
-                <MapPin className="w-4 h-4" />
-                View ATM Map
+                <Users className="w-5 h-5" />
+                View Engineers
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Overview - Clean Cards */}
+      {/* Stats Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-2 bg-blue-50 rounded-lg">
-                <Activity className="w-5 h-5 text-blue-600" />
+              <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl group-hover:scale-110 transition-transform">
+                <Activity className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
-              <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+              <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full border border-blue-200 dark:border-blue-800">
                 LIVE
               </span>
             </div>
-            <p className="text-sm text-gray-600 mb-1">Total ATMs</p>
-            <p className="text-2xl font-bold text-gray-900">{formatNumber(stats.total)}</p>
-            <p className="text-xs text-gray-500 mt-2">Active nationwide</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Total ATMs</p>
+            <p className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              {formatNumber(stats.total)}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">Active nationwide</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-2 bg-green-50 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-xl group-hover:scale-110 transition-transform">
+                <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
-              <span className="text-xs font-medium text-green-600">
+              <div className="flex items-center gap-1 text-xs font-semibold text-green-600 dark:text-green-400">
+                <TrendingUp className="w-4 h-4" />
                 +2.3%
-              </span>
+              </div>
             </div>
-            <p className="text-sm text-gray-600 mb-1">Network Uptime</p>
-            <p className="text-2xl font-bold text-gray-900">{stats.uptimePercentage}%</p>
-            <p className="text-xs text-gray-500 mt-2">{stats.operational} operational</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Network Uptime</p>
+            <p className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              {stats.uptimePercentage}%
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">{stats.operational} operational</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-2 bg-amber-50 rounded-lg">
-                <AlertTriangle className="w-5 h-5 text-amber-600" />
+              <div className="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-xl group-hover:scale-110 transition-transform">
+                <AlertTriangle className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
               {alerts.length > 0 && (
-                <span className="relative flex h-2 w-2">
+                <div className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-                </span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                </div>
               )}
             </div>
-            <p className="text-sm text-gray-600 mb-1">Active Alerts</p>
-            <p className="text-2xl font-bold text-gray-900">{formatNumber(alerts.length)}</p>
-            <p className="text-xs text-gray-500 mt-2">Requiring attention</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Active Alerts</p>
+            <p className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              {formatNumber(alerts.length)}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">Requiring attention</p>
           </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+          <div className="group bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div className="flex items-center justify-between mb-4">
-              <div className="p-2 bg-purple-50 rounded-lg">
-                <Users className="w-5 h-5 text-purple-600" />
+              <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl group-hover:scale-110 transition-transform">
+                <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
-              <span className="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded">
+              <span className="text-xs font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 px-3 py-1 rounded-full border border-purple-200 dark:border-purple-800">
                 24/7
               </span>
             </div>
-            <p className="text-sm text-gray-600 mb-1">Field Engineers</p>
-            <p className="text-2xl font-bold text-gray-900">{formatNumber(engineerCount)}</p>
-            <p className="text-xs text-gray-500 mt-2">Available for dispatch</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Field Engineers</p>
+            <p className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              {formatNumber(engineerCount)}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">Available for dispatch</p>
           </div>
         </div>
       </div>
 
-      {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* Recent Alerts - Clean Design */}
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-amber-500" />
-                Recent Alerts
-              </h2>
-              <Link to="/dashboard" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
-                View all →
-              </Link>
-            </div>
+      {/* Features Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              Platform Features
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Built with cutting-edge AI and real-time analytics to revolutionize ATM operations
+          </p>
+        </div>
 
-            {alertsLoading ? (
-              <LoadingSpinner />
-            ) : alerts.length === 0 ? (
-              <div className="text-center py-8 bg-green-50 rounded-lg">
-                <CheckCircle className="w-12 h-12 mx-auto mb-3 text-green-500" />
-                <p className="text-gray-700 font-medium">All systems operational</p>
-                <p className="text-sm text-gray-500 mt-1">No active alerts at this time</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+            <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-400 transition-all h-full">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Brain className="w-7 h-7 text-blue-600 dark:text-blue-400" />
               </div>
-            ) : (
-              <div className="space-y-3">
-                {alerts.slice(0, 5).map((alert) => (
-                  <div
-                    key={alert.id}
-                    className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
-                  >
-                    <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-amber-500"></div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-medium text-gray-900">{alert.atms?.atm_id}</span>
-                        <span className="text-xs text-gray-500 bg-gray-200 px-2 py-0.5 rounded">
-                          {alert.atms?.zone}
-                        </span>
-                      </div>
-                      <div className="space-y-1 text-sm text-gray-600">
-                        {alert.cash_percentage < 20 && (
-                          <div className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-orange-400 rounded-full"></span>
-                            <span>Low cash: {alert.cash_percentage}%</span>
-                          </div>
-                        )}
-                        {alert.card_reader_health < 85 && (
-                          <div className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-red-400 rounded-full"></span>
-                            <span>Card reader health: {alert.card_reader_health}%</span>
-                          </div>
-                        )}
-                        {alert.dispenser_health < 85 && (
-                          <div className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-yellow-400 rounded-full"></span>
-                            <span>Dispenser health: {alert.dispenser_health}%</span>
-                          </div>
-                        )}
-                      </div>
-                      <span className="text-xs text-gray-400 mt-2 block">
-                        {formatTimeAgo(alert.timestamp)}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Predictive AI</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                ML models predict failures 48-72 hours in advance with 80%+ accuracy
+              </p>
+            </div>
           </div>
 
-          {/* Recent Maintenance - Clean Design */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-500" />
-                Recent Activity
-              </h2>
+          <div className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+            <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 hover:border-green-500 dark:hover:border-green-400 transition-all h-full">
+              <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Activity className="w-7 h-7 text-green-600 dark:text-green-400" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Real-time Monitoring</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Live telemetry tracking of cash levels, hardware health, and transaction metrics
+              </p>
             </div>
+          </div>
 
-            <div className="space-y-4">
-              {recentMaintenance.map((event) => (
-                <div key={event.event_id} className="border-l-2 border-gray-200 pl-4 hover:border-blue-300 transition-colors">
-                  <div className={`inline-block px-2 py-0.5 rounded text-xs font-medium mb-1 ${
-                    event.severity === 'critical' ? 'bg-red-100 text-red-700' :
-                    event.severity === 'major' ? 'bg-orange-100 text-orange-700' :
-                    event.severity === 'minor' ? 'bg-yellow-100 text-yellow-700' :
-                    'bg-blue-100 text-blue-700'
-                  }`}>
-                    {event.severity}
-                  </div>
-                  <p className="text-sm font-medium text-gray-900">
-                    {event.atm_id}
-                  </p>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {event.description}
-                  </p>
-                  <p className="text-xs text-gray-400 mt-2">
-                    {formatTimeAgo(event.reported_at)}
-                  </p>
-                </div>
-              ))}
+          <div className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+            <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-400 transition-all h-full">
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Target className="w-7 h-7 text-purple-600 dark:text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Smart Dispatch</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                AI-powered routing matches engineers to issues based on skills and proximity
+              </p>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+            <div className="relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 hover:border-amber-500 dark:hover:border-amber-400 transition-all h-full">
+              <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <BarChart3 className="w-7 h-7 text-amber-600 dark:text-amber-400" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Advanced Analytics</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Comprehensive dashboards with actionable insights and performance metrics
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Features Grid - Minimalistic */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-          <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <TrendingUp className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Predictive Maintenance</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              AI-powered predictions identify potential failures 24-72 hours in advance, preventing downtime.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <MapPin className="w-6 h-6 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Dispatch</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Optimal engineer routing based on skills, proximity, and availability for 42% faster response times.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <Activity className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Monitoring</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Live telemetry from all ATMs with instant alerts for critical issues and performance degradation.
-            </p>
-          </div>
-        </div>
-
-        {/* Additional Features Section */}
-        <div className="mt-20">
+      {/* Impact Metrics */}
+      <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose SmartATMNet?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our comprehensive platform combines cutting-edge technology with intuitive design 
-              to deliver unmatched ATM network management capabilities.
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Measurable Impact</h2>
+            <p className="text-xl text-gray-400">Transforming ATM operations with quantifiable results</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full mb-4">
+                <TrendingUp className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
-              <p className="text-sm text-gray-600">
-                Enterprise-grade security with 99.9% uptime guarantee
-              </p>
+              <p className="text-5xl font-bold text-white mb-2">98.6%</p>
+              <p className="text-gray-400">Target Uptime</p>
+              <p className="text-sm text-gray-500 mt-2">Up from 70% baseline</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="w-8 h-8 text-green-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/20 rounded-full mb-4">
+                <Clock className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Advanced Analytics</h3>
-              <p className="text-sm text-gray-600">
-                Deep insights with predictive analytics and reporting
-              </p>
+              <p className="text-5xl font-bold text-white mb-2">50%</p>
+              <p className="text-gray-400">Reduced MTTR</p>
+              <p className="text-sm text-gray-500 mt-2">Mean time to repair</p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Cpu className="w-8 h-8 text-purple-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/20 rounded-full mb-4">
+                <TrendingDown className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">AI-Powered</h3>
-              <p className="text-sm text-gray-600">
-                Machine learning algorithms for smart decision making
-              </p>
+              <p className="text-5xl font-bold text-white mb-2">40%</p>
+              <p className="text-gray-400">Cost Reduction</p>
+              <p className="text-sm text-gray-500 mt-2">Operational expenses</p>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">24/7 Support</h3>
-              <p className="text-sm text-gray-600">
-                Round-the-clock expert support and monitoring
-              </p>
-            </div>
+      {/* CTA Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-3xl p-12 md:p-16">
+          <div className="absolute inset-0 bg-grid-white/10"></div>
+          <div className="relative z-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your ATM Operations?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join the future of intelligent ATM management with SmartATMNet
+            </p>
+            <Link
+              to="/dashboard"
+              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-all duration-200 shadow-lg"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-20">
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">SmartATMNet</h3>
-              <p className="text-gray-600 mb-6 max-w-md">
-                Leading the future of ATM network management with intelligent solutions 
-                that maximize uptime and operational efficiency.
+          <div className="text-center">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">
+              SmartATMNet
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+              AI-powered ATM operations platform for the future of banking infrastructure
+            </p>
+            <div className="flex justify-center space-x-6">
+              <a href="#" className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Github className="w-6 h-6" />
+              </a>
+            </div>
+            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                © 2025 SmartATMNet. Built for Zenith Bank Zecathon 5.0
               </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/dashboard" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Dashboard
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/map" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    ATM Map
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/analytics" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Analytics
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/support" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Contact Us</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-gray-600">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:support@smartatmnet.com" className="hover:text-blue-600 transition-colors">
-                    support@smartatmnet.com
-                  </a>
-                </li>
-                <li className="flex items-center gap-2 text-gray-600">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
-                </li>
-                <li className="flex items-center gap-2 text-gray-600">
-                  <Globe className="w-4 h-4" />
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    www.smartatmnet.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="mt-8 pt-8 border-t border-gray-200">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-sm text-gray-600">
-                © 2024 SmartATMNet. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                  Terms of Service
-                </a>
-                <a href="#" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                  Cookie Policy
-                </a>
-              </div>
             </div>
           </div>
         </div>
       </footer>
 
-      {/* Add subtle blob animation */}
+      {/* Animations */}
       <style jsx>{`
         @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
         }
         .animate-blob {
           animation: blob 7s infinite;
