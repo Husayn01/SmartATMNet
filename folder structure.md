@@ -1,20 +1,6 @@
 ```
 └── 📁SmartATMNet
-        └── 📁refs
-            └── 📁heads
-                ├── main
-            └── 📁remotes
-                └── 📁origin
-                    ├── HEAD
-                    ├── main
-            └── 📁tags
-        ├── COMMIT_EDITMSG
-        ├── config
-        ├── description
-        ├── FETCH_HEAD
-        ├── HEAD
-        ├── index
-        ├── ORIG_HEAD
+
         ├── packed-refs
     └── 📁datasets
         ├── smartatmnet_atms.csv
@@ -31,11 +17,17 @@
             └── 📁assets
                 ├── react.svg
             └── 📁components
+                └── 📁auth
+                    ├── ProtectedRoute.jsx
+                    ├── RoleBasedAccess.jsx
                 └── 📁common
                     ├── LoadingSpinner.jsx
                     ├── Navbar.jsx
                     ├── StatCard.jsx
                 └── 📁dashboard
+            └── 📁contexts
+                ├── AuthContext.jsx
+                ├── ThemeContext.jsx
             └── 📁hooks
                 ├── useATMs.js
                 ├── useTelemetry.js
@@ -44,6 +36,8 @@
                 ├── Dashboard.jsx
                 ├── Engineers.jsx
                 ├── Landing.jsx
+                ├── Login.jsx
+                ├── Signup.jsx
             └── 📁services
                 ├── supabase.js
             └── 📁utils
@@ -59,7 +53,9 @@
         ├── package-lock.json
         ├── package.json
         ├── README.md
+        ├── tailwind.config.js
         ├── vite.config.js
     ├── .gitignore
+    ├── folder structure.md
     └── README.md
 ```
